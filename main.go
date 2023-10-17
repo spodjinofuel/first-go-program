@@ -5,15 +5,6 @@ import (
 	"strings"
 )
 
-func exist(numbers []string, number string) bool {
-	for _, n := range numbers {
-		if n == number {
-			return true
-		}
-	}
-	return false
-}
-
 func calc(a, b string, ch string) interface{} {
 	isArab := func(number string) bool {
 		arabnum := []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}
@@ -95,6 +86,15 @@ func calc(a, b string, ch string) interface{} {
 	} else {
 		return "Неверно введенная строка"
 	}
+}
+
+func exist(numbers []string, number string) bool {
+	for _, n := range numbers {
+		if n == number {
+			return true
+		}
+	}
+	return false
 }
 
 func main() {
